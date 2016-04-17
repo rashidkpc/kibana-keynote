@@ -16,8 +16,16 @@ app.directive('slides', function ($document, $routeParams, $location, $timeout) 
 
       $document.bind('keydown', function(e) {
         var key = e.keyCode;
-        if ((key === 37 || key === 38) && $scope.currentSlide > 0) $scope.currentSlide--;
-        if ((key === 39 || key === 40) && $scope.currentSlide < $scope.slides.length - 1) $scope.currentSlide++;
+        console.log(key);
+
+        // Toggle between cover and contain
+        if ((key === 70)) { // alt + f
+          var sizing = $elem.css('background-size');
+          $elem.css('background-size', sizing === 'cover' ? 'contain' : 'cover');
+        }
+
+        if ((key === 37 || key === 38) && $scope.currentSlide > 0) $scope.currentSlide--; // down or left
+        if ((key === 39 || key === 40) && $scope.currentSlide < $scope.slides.length - 1) $scope.currentSlide++; // up or right
         setSlide($scope.currentSlide);
         $scope.$apply();
       })

@@ -24,7 +24,7 @@ var pathToKibana = '../kibana';
 var buildDir = path.resolve(__dirname, 'build');
 var targetDir = path.resolve(__dirname, 'target');
 var buildTarget = path.resolve(buildDir, pkg.name);
-var kibanaPluginDir = path.resolve(__dirname, pathToKibana, 'installedPlugins', pkg.name);
+var kibanaPluginDir = path.resolve(__dirname, pathToKibana, 'plugins', pkg.name);
 
 var include = [
   'package.json',

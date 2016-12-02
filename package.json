@@ -1,6 +1,6 @@
 {
   "name": "kibana-keynote",
-  "version": "5.0.0-rc1",
+  "version": "kibana",
   "description": "Weeeeee",
   "main": "gulpfile.js",
   "scripts": {
